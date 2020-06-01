@@ -16,23 +16,6 @@ const SelectServices = () => {
   return <option value="service1"> Service1</option>;
 };
 
-const AddButton = () => {
-  return (
-    <div>
-      <button className="btn btn-success mt-5">Add</button>
-      <hr />
-    </div>
-  );
-};
-
-const DeleteButton = () => {
-  return (
-    <div>
-      <button className="btn btn-danger">Delete</button>
-    </div>
-  );
-};
-
 const App = () => {
   const [services, setServices] = useState([
     "video chat ",
@@ -44,6 +27,13 @@ const App = () => {
     "text",
   ]);
   const [customerServices, setCustomerServices] = useState([]);
+  const [visible, setVisible] = useState(true);
+
+  //Clicking the add Button
+  const add = () => {
+    //alert("hello");
+    setVisible(!visible)
+  };
   return (
     <div className="App text-danger container">
       <div className="heading text-center">
@@ -61,13 +51,19 @@ const App = () => {
           </ul>
         </div>
         <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-          <div className="form-group">
-            <select className="form-control">
-              <SelectServices />
+          <div className="form-group mt-5">
+            <select className="form-control" style={{ "display": visible ? "none": "block"}}>
+              <SelectServices  />
             </select>
           </div>
-          <AddButton />
-          <DeleteButton />
+          <div>
+            <button className="btn btn-success mt-5" onClick={add}>Add</button>
+            <hr />
+          </div>
+
+          <div>
+            <button className="btn btn-danger">Delete</button>
+          </div>
           <div className="form-group mt-5">
             <select className="form-control"></select>
           </div>
