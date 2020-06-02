@@ -141,7 +141,7 @@ const App = () => {
       <footer class="footer mt-5">
           <div class="container text-center">
             <span class="text-white">Created By Theodore Kelechukwu Onyejiaku 
-            <br/><a href=""><i className="fa fa-linkedin text-white"></i></a> | <a href=""><i className="fa fa-github text-white"></i></a></span>
+            <br/><a href="https://www.linkedin.com/in/theodore20151014166/"><i className="fa fa-linkedin text-white"></i></a> | <a href="https://github.com/Theodore-Kelechukwu-Onyejiaku"><i className="fa fa-github text-white"></i></a></span>
           </div>
         </footer>
     </div>
